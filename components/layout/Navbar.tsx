@@ -37,12 +37,11 @@ export default function Navbar() {
 
         <div className="hidden items-center gap-8 md:flex">
           {links.map((l) => (
-            <Link key={l.href} href={l.href} className={`relative text-sm font-medium ${pathname === l.href ? 'text-primary' : 'text-text hover:text-primary'}`}>
+            <Link key={l.href} href={l.href} className={`nav-link text-sm font-medium ${pathname === l.href ? 'active text-primary' : 'text-text hover:text-primary'}`}>
               {l.label}
-              {pathname === l.href ? <span className="absolute -bottom-2 left-0 h-0.5 w-full bg-accent" /> : null}
             </Link>
           ))}
-          <Link href={`tel:${doctor.phone}`} className="rounded-lg bg-primary px-5 py-3 text-sm font-medium text-white shadow-md transition hover:bg-primary-dark">
+          <Link href={`tel:${doctor.phone}`} className="btn-primary-hover rounded-lg bg-primary px-5 py-3 text-sm font-medium text-white shadow-md transition hover:bg-primary-dark">
             Call Now
           </Link>
         </div>

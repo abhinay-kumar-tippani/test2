@@ -16,7 +16,7 @@ const iconMap: Record<string, ComponentType<{ className?: string }>> = {
 
 export default function WhyChooseUs() {
   return (
-    <AnimatedSection className="section-space bg-white">
+    <AnimatedSection className="section-space bg-cream">
       <div className="section-shell">
         <SectionHeading title={`Why Patients Choose ${doctor.shortName}`} />
         <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={{ hidden: {}, show: { transition: { staggerChildren: 0.12 } } }} className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

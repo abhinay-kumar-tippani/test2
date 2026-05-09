@@ -16,7 +16,7 @@ export default function DoctorHero() {
           <p className="mt-2 text-sm text-muted">{doctor.registrationNo}</p>
           <div className="mt-6 space-y-4 text-muted">{doctor.bio.map((b) => <p key={b}>{b}</p>)}</div>
           <div className="mt-6 flex flex-wrap gap-2">{doctor.languages.map((l) => <Badge key={l}>{l}</Badge>)}</div>
-          <blockquote className="mt-6 border-l-4 border-accent pl-4 font-display text-3xl italic text-dark">"{doctor.philosophy}"</blockquote>
+          <blockquote className="mt-6 border-l-4 border-gold pl-4 font-display text-[1.6rem] italic text-dark">"{doctor.philosophy}"</blockquote>
         </div>
       </div>
     </section>

@@ -7,7 +7,7 @@ import { doctor } from '@/config/doctor';
 
 export default function AboutSnippet() {
   return (
-    <section className="section-space bg-white">
+    <section className="section-space bg-cream">
       <div className="section-shell grid items-center gap-10 lg:grid-cols-5">
         <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="relative lg:col-span-3">
           <div className="absolute -bottom-4 -right-4 h-full w-full rounded-2xl border-2 border-accent" />

@@ -5,7 +5,7 @@ import { doctor } from '@/config/doctor';
 export default function ContactCta() {
   const wa = `https://wa.me/${doctor.whatsapp}?text=${encodeURIComponent(doctor.whatsappMessage)}`;
   return (
-    <section className="section-space bg-primary">
+    <section className="section-space bg-navy">
       <div className="section-shell text-center">
         <h2 className="text-4xl font-bold text-white md:text-[42px]">Ready to book your visit?</h2>
         <p className="mx-auto mt-3 max-w-2xl text-white/70">Call or message us directly and we will guide you on the next best step for your dental concern.</p>

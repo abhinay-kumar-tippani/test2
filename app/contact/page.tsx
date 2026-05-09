@@ -12,8 +12,8 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <ContactInfo />
       <MapEmbed />
+      <ContactInfo />
       <section className="section-space bg-white pt-0">
         <div className="section-shell max-w-4xl">
           <h2 className="mb-6 text-center text-4xl font-bold text-dark">Frequently Asked Questions</h2>

@@ -10,7 +10,7 @@ export default function FaqTeaser() {
   const [open, setOpen] = useState<number | null>(0);
   const faqs = doctor.faqs.slice(0, 3);
   return (
-    <section className="section-space bg-surface">
+    <section className="section-space bg-white">
       <div className="section-shell max-w-4xl">
         <SectionHeading title="Common Questions" />
         <div className="space-y-3">

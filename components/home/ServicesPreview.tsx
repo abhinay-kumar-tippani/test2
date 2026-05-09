@@ -6,7 +6,7 @@ import ServiceCard from '@/components/services/ServiceCard';
 
 export default function ServicesPreview() {
   return (
-    <AnimatedSection className="section-space bg-surface">
+    <AnimatedSection className="section-space bg-white">
       <div className="section-shell">
         <SectionHeading title="What We Treat" subtitle="Comprehensive dental care for every stage of life" />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

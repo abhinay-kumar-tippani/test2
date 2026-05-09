@@ -5,7 +5,7 @@ import { doctor } from '@/config/doctor';
 
 export default function ClinicPreview() {
   return (
-    <section className="section-space bg-surface">
+    <section className="section-space bg-white">
       <div className="section-shell">
         <SectionHeading title="Step Inside Our Clinic" />
         <div className="grid gap-4 lg:grid-cols-3">

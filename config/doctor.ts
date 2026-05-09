@@ -226,28 +226,36 @@ export const doctor = {
         "I had been dreading a root canal for months. The procedure was completely painless and finished in one sitting. I couldn't believe it. The clinic is also spotlessly clean and calm.",
     },
     {
-      name: "Arjun Bhatia",
+      name: "Neha Arora",
       location: "Lajpat Nagar",
       rating: 5,
       service: "Teeth Whitening",
       quote:
-        "Results after just one session were incredible — far better than any home kit I'd tried before. Colleagues at work noticed immediately. Highly recommend.",
+        "I had staining from years of coffee and was very conscious while speaking. Dr. Priya explained what result I could realistically expect and delivered exactly that. My smile looks brighter but still natural.",
     },
     {
-      name: "Meera Nair",
-      location: "GK Part 2",
+      name: "Kunal Malhotra",
+      location: "Saket",
+      rating: 5,
+      service: "Crowns & Bridges",
+      quote:
+        "I needed two crowns after a fracture and wanted them to match perfectly. The fit and shade were spot on, and chewing feels completely normal now. The whole process was smooth and on schedule.",
+    },
+    {
+      name: "Aditi Verma",
+      location: "Defence Colony",
+      rating: 5,
+      service: "Orthodontics",
+      quote:
+        "I started aligner treatment after years of postponing it. Dr. Priya made a clear month-by-month plan and tracked every change carefully. I can already see a huge difference in my smile confidence.",
+    },
+    {
+      name: "Harpreet Kaur",
+      location: "Kalkaji",
       rating: 5,
       service: "Pediatric Dentistry",
       quote:
-        "My 7-year-old was terrified of dentists. Dr. Priya was so patient and gentle that he actually asked to come back for his next check-up. That says everything.",
-    },
-    {
-      name: "Vikram Singh",
-      location: "Defence Colony",
-      rating: 5,
-      service: "Crowns",
-      quote:
-        "Had three crowns replaced. They match perfectly and Dr. Priya finished everything on time, as promised. Professional, precise, and genuinely caring about the outcome.",
+        "My daughter used to get anxious before dental visits, but this clinic changed that experience completely. The team was patient, gentle, and explained everything in kid-friendly language. She now goes in calmly for check-ups.",
     },
   ],
 

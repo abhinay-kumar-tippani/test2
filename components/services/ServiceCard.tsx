@@ -1,5 +1,7 @@
+import Link from 'next/link';
 import { CheckCircle2, Crown, Sparkles, Smile, Syringe, WandSparkles } from 'lucide-react';
 import type { ComponentType } from 'react';
+import { doctor } from '@/config/doctor';
 
 const iconMap: Record<string, ComponentType<{ className?: string }>> = {
   implant: Syringe,
@@ -26,6 +28,9 @@ export default function ServiceCard({
   expanded?: boolean;
 }) {
   const Icon = iconMap[service.icon] ?? Smile;
+  const serviceWhatsApp = `https://wa.me/${doctor.whatsapp}?text=${encodeURIComponent(
+    `Hi, I'd like to know more about ${service.name} at ${doctor.clinicName}.`
+  )}`;
   return (
     <article id={expanded ? service.id : undefined} className="card-premium border-l-4 border-l-transparent hover:border-l-accent">
       <div className="mb-3 inline-flex rounded-full bg-primary/10 p-3 text-primary"><Icon className="h-5 w-5" /></div>
@@ -39,6 +44,13 @@ export default function ServiceCard({
             ))}
           </ul>
           <p className="mt-4 text-sm font-medium text-primary">Duration: {service.duration}</p>
+          <Link
+            href={serviceWhatsApp}
+            target="_blank"
+            className="mt-4 inline-flex rounded-lg border border-gold px-4 py-2 text-sm font-medium text-gold transition-all duration-200 hover:bg-gold hover:text-white"
+          >
+            Ask About {service.name}
+          </Link>
         </>
       ) : null}
     </article>
