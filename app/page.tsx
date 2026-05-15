@@ -6,7 +6,7 @@ import WhyChooseUs from '@/components/home/WhyChooseUs';
 import ServicesPreview from '@/components/home/ServicesPreview';
 import AboutSnippet from '@/components/home/AboutSnippet';
 import Testimonials from '@/components/home/Testimonials';
-import GoogleReviewsBanner from '@/components/home/GoogleReviewsBanner';
+import VerifiedReviews from '@/components/home/VerifiedReviews';
 import BeforeAfterPreview from '@/components/home/BeforeAfterPreview';
 import ClinicPreview from '@/components/home/ClinicPreview';
 import Process from '@/components/home/Process';
@@ -26,7 +26,7 @@ export default function HomePage() {
       <ServicesPreview />
       <AboutSnippet />
       <Testimonials />
-      <GoogleReviewsBanner />
+      <VerifiedReviews />
       <BeforeAfterPreview />
       <ClinicPreview />
       <Process />

@@ -1,27 +1,36 @@
 import { doctor } from '@/config/doctor';
 import SectionHeading from '@/components/ui/SectionHeading';
+import GoogleGIcon from '@/components/ui/GoogleGIcon';
 
 export default function Testimonials() {
   return (
-    <section className="section-space bg-white">
+    <section className="section-space bg-surface">
       <div className="section-shell">
         <SectionHeading title="What Our Patients Say" />
         <div className="grid gap-6 md:grid-cols-2">
           {doctor.testimonials.map((t) => (
-            <article key={t.name} className="card-premium border-l-4 border-l-gold">
-              <div className="mb-4 flex items-center gap-3">
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-sm font-semibold text-primary">
-                  {t.name.split(' ').map((n) => n[0]).join('').slice(0, 2)}
-                </span>
-                <div>
-                  <p className="text-sm font-medium text-dark">{t.name}</p>
-                  <p className="text-xs text-muted">{t.location} · {t.service}</p>
-                </div>
+            <article key={t.name} className="rounded-2xl border border-border bg-white p-6 shadow-[0_10px_30px_rgba(10,22,40,0.07)]">
+              <p className="mb-3 text-sm text-gold">{'★'.repeat(t.rating)}</p>
+              <p className="mb-4 text-lg italic leading-relaxed text-text">"{t.quote}"</p>
+              <span className="mb-3 block h-px w-14 bg-gold/80" />
+              <div>
+                <p className="text-sm font-semibold text-navy">{t.name}</p>
+                <p className="text-xs text-muted">{t.location} · {t.service}</p>
+                <p className="mt-1 inline-flex items-center gap-1 text-xs text-green-700">
+                  <span className="h-2 w-2 rounded-full bg-green-600" />
+                  Verified
+                </p>
+                <p className="mt-1 inline-flex items-center gap-1 text-xs text-muted">
+                  <GoogleGIcon size={14} />
+                  {t.reviewSource}
+                </p>
               </div>
-              <p className="mb-2 text-sm text-gold">★★★★★</p>
-              <p className="font-display text-2xl italic text-dark">"{t.quote}"</p>
             </article>
           ))}
+        </div>
+        <div className="mt-10 flex items-center justify-center gap-3 rounded-xl border border-gold/40 bg-white px-5 py-4 text-center shadow-[0_10px_30px_rgba(10,22,40,0.08)]">
+          <GoogleGIcon size={24} />
+          <p className="text-sm font-semibold text-navy">{doctor.googleRating} ★ on Google — {doctor.googleReviewCount} Reviews</p>
         </div>
       </div>
     </section>

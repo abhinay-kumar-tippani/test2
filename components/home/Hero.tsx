@@ -3,35 +3,64 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ShieldCheck, Sparkles, Star, Users } from 'lucide-react';
+import { Award, ShieldCheck, Star, Stethoscope, UsersRound } from 'lucide-react';
+import { useState } from 'react';
 import { doctor } from '@/config/doctor';
+import NmcRegistration from '@/components/ui/NmcRegistration';
 
 const item = { initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 } };
 
 export default function Hero() {
+  const [showDoctorImage, setShowDoctorImage] = useState(true);
+
   return (
-    <section className="relative min-h-screen overflow-hidden">
-      {/* REPLACE: public/doctor/hero.jpg — professional headshot of the doctor, well-lit, clinic background */}
-      <Image src={doctor.images.doctor.hero} alt={`${doctor.name} hero`} fill className="object-cover" blurDataURL="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" placeholder="blur" />
-      <div className="absolute inset-0 bg-gradient-to-b from-dark/80 via-dark/50 to-transparent md:bg-gradient-to-r" />
-      <motion.div initial="initial" animate="animate" transition={{ staggerChildren: 0.15 }} className="section-shell relative flex min-h-screen items-center py-24">
-        <div className="max-w-2xl text-center md:text-left">
-          <motion.span variants={item} className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-4 py-2 text-sm text-white">
-            <ShieldCheck size={16} className="text-accent" /> NMC Registered · {doctor.credentials}
+    <section
+      className="relative overflow-hidden bg-navy py-16 text-white md:py-20"
+      style={{
+        backgroundImage:
+          "repeating-linear-gradient(-35deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 26px)",
+      }}
+    >
+      <motion.div initial="initial" animate="animate" transition={{ staggerChildren: 0.12 }} className="section-shell relative grid items-center gap-8 md:grid-cols-2">
+        <div className="order-2 md:order-1 md:max-w-2xl">
+          <motion.span variants={item} className="inline-flex items-center gap-2 rounded-full border border-gold/60 bg-gold/10 px-4 py-2 text-xs font-medium uppercase tracking-[0.08em] text-gold">
+            <ShieldCheck size={14} /> NMC Registered · {doctor.credentials}
           </motion.span>
-          <motion.h1 variants={item} className="mt-5 font-display text-5xl font-bold leading-tight text-white md:text-[64px]">{doctor.name}</motion.h1>
-          <motion.p variants={item} className="mt-2 text-xl text-white/80">{doctor.tagline}</motion.p>
-          <motion.p variants={item} className="mt-4 max-w-xl text-white/70">{doctor.heroSubtitle}</motion.p>
-          <motion.div variants={item} className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Link href="/about" className="inline-flex h-12 items-center justify-center rounded-lg bg-primary px-7 text-white shadow-md transition hover:bg-primary-dark">About {doctor.shortName}</Link>
-            <Link href={`tel:${doctor.phone}`} className="inline-flex h-12 items-center justify-center rounded-lg border-2 border-white px-7 text-white transition hover:bg-white hover:text-primary">Call Now: {doctor.phoneDisplay}</Link>
+          <motion.h1 variants={item} className="mt-5 font-display text-5xl font-bold leading-tight text-white md:text-6xl">{doctor.name}</motion.h1>
+          <motion.p variants={item} className="mt-3 text-xl text-white/80">{doctor.tagline}</motion.p>
+          <motion.div variants={item} className="mt-2 text-sm text-white/80">
+            <NmcRegistration className="text-white/80" />
           </motion.div>
-          <motion.div variants={item} className="mt-8 flex flex-wrap justify-center gap-3 md:justify-start">
-            <span className="rounded-full bg-white/15 px-3 py-1 text-sm text-white"><Sparkles className="mr-1 inline" size={14} />{doctor.stats[0]?.value}{doctor.stats[0]?.suffix} Years</span>
-            <span className="rounded-full bg-white/15 px-3 py-1 text-sm text-white"><Users className="mr-1 inline" size={14} />{doctor.stats[1]?.value.toLocaleString('en-IN')}{doctor.stats[1]?.suffix} Patients</span>
-            <span className="rounded-full bg-white/15 px-3 py-1 text-sm text-white"><Star className="mr-1 inline" size={14} />5-Star Rated</span>
+          <motion.p variants={item} className="mt-3 text-base text-white/70">Trusted by 4,800+ patients across Delhi</motion.p>
+          <motion.div variants={item} className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <Link href="/contact" className="inline-flex h-12 items-center justify-center rounded-lg bg-gold px-7 font-semibold text-navy transition hover:brightness-105">Book Appointment</Link>
+            <Link href={`tel:${doctor.phone}`} className="inline-flex h-12 items-center justify-center rounded-lg border border-white/70 px-7 text-white transition hover:bg-white hover:text-navy">Call Now: {doctor.phoneDisplay}</Link>
+          </motion.div>
+          <motion.div variants={item} className="mt-8 flex flex-wrap gap-3">
+            <span className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-navy-mid/60 px-3 py-1.5 text-xs text-gold"><Award size={14} />12+ Years</span>
+            <span className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-navy-mid/60 px-3 py-1.5 text-xs text-gold"><UsersRound size={14} />4,800+ Patients</span>
+            <span className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-navy-mid/60 px-3 py-1.5 text-xs text-gold"><Star size={14} />5-Star Rated</span>
           </motion.div>
         </div>
+        <motion.div variants={item} className="order-1 md:order-2">
+          {showDoctorImage ? (
+            <div className="relative mx-auto h-[360px] w-full max-w-[460px] overflow-hidden rounded-[26px] border border-gold/30 bg-navy-mid shadow-[0_30px_60px_rgba(0,0,0,0.35)] md:h-[520px]">
+              <Image
+                src="/doctor/hero.jpg"
+                alt={`${doctor.name} portrait`}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 90vw, 40vw"
+                onError={() => setShowDoctorImage(false)}
+              />
+            </div>
+          ) : (
+            <div className="mx-auto flex h-[360px] w-full max-w-[460px] flex-col items-center justify-center rounded-[26px] border border-gold/30 bg-navy-mid shadow-[0_30px_60px_rgba(0,0,0,0.35)] md:h-[520px]">
+              <Stethoscope size={70} className="text-gold/80" />
+              <p className="mt-4 text-sm text-white/70">Doctor image will appear here</p>
+            </div>
+          )}
+        </motion.div>
       </motion.div>
     </section>
   );

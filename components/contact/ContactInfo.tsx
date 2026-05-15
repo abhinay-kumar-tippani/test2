@@ -4,6 +4,7 @@ import { doctor } from '@/config/doctor';
 
 export default function ContactInfo() {
   const wa = `https://wa.me/${doctor.whatsapp}?text=${encodeURIComponent(doctor.whatsappMessage)}`;
+  const mapsQueryUrl = `https://maps.google.com/?q=${encodeURIComponent(doctor.clinicAddress)}`;
   return (
     <section className="section-space bg-white">
       <div className="section-shell grid gap-8 lg:grid-cols-2">
@@ -13,7 +14,7 @@ export default function ContactInfo() {
           <p className="flex items-center gap-2"><Phone size={18} className="text-primary" /> {doctor.phoneDisplay}</p>
           <p className="flex items-center gap-2"><Mail size={18} className="text-primary" /> {doctor.email}</p>
           <div className="space-y-1 text-sm text-muted">{doctor.workingHours.map((h) => <p key={h.days}>{h.days}: {h.hours}</p>)}</div>
-          <Link href="https://maps.google.com" target="_blank" className="text-sm font-medium text-primary">Open in Maps</Link>
+          <Link href={mapsQueryUrl} target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-primary">Open in Maps</Link>
         </div>
         <div className="flex flex-col gap-4 self-center">
           <Link href={`tel:${doctor.phone}`} className="inline-flex h-12 items-center justify-center rounded-lg bg-primary px-7 font-medium text-white"><Phone className="mr-2" size={18} />Call Now</Link>

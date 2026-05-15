@@ -5,20 +5,21 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { doctor } from '@/config/doctor';
 import Lightbox, { GalleryImage } from './Lightbox';
+import { resolveDemoImage } from '@/lib/demoImages';
 
 const clinicImages: GalleryImage[] = [
-  { src: doctor.images.clinic.reception, alt: 'Clinic reception area', caption: 'Reception' },
-  { src: doctor.images.clinic.treatmentRoom, alt: 'Treatment room', caption: 'Treatment Room' },
-  { src: doctor.images.clinic.equipment, alt: 'Dental equipment', caption: 'Equipment' },
-  { src: doctor.images.clinic.exterior, alt: 'Clinic exterior', caption: 'Exterior' },
-  { src: doctor.images.clinic.waitingArea, alt: 'Waiting area', caption: 'Waiting Area' },
+  { src: resolveDemoImage(doctor.images.clinic.reception), alt: 'Clinic reception area', caption: 'Reception' },
+  { src: resolveDemoImage(doctor.images.clinic.treatmentRoom), alt: 'Treatment room', caption: 'Treatment Room' },
+  { src: resolveDemoImage(doctor.images.clinic.equipment), alt: 'Dental equipment', caption: 'Equipment' },
+  { src: resolveDemoImage(doctor.images.clinic.exterior), alt: 'Clinic exterior', caption: 'Exterior' },
+  { src: resolveDemoImage(doctor.images.clinic.waitingArea), alt: 'Waiting area', caption: 'Waiting Area' },
 ];
 
 const doctorImages: GalleryImage[] = [
-  { src: doctor.images.doctor.hero, alt: `${doctor.name} hero photo`, caption: doctor.name },
-  { src: doctor.images.doctor.about, alt: `${doctor.name} at clinic`, caption: 'At the Clinic' },
-  { src: doctor.images.doctor.profile, alt: `${doctor.name} profile`, caption: 'Profile' },
-  { src: doctor.images.doctor.team, alt: 'Clinic team', caption: 'Our Team' },
+  { src: resolveDemoImage(doctor.images.doctor.hero), alt: `${doctor.name} hero photo`, caption: doctor.name },
+  { src: resolveDemoImage(doctor.images.doctor.about), alt: `${doctor.name} at clinic`, caption: 'At the Clinic' },
+  { src: resolveDemoImage(doctor.images.doctor.profile), alt: `${doctor.name} profile`, caption: 'Profile' },
+  { src: resolveDemoImage(doctor.images.doctor.team), alt: 'Clinic team', caption: 'Our Team' },
 ];
 
 export default function GalleryTabs() {

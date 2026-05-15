@@ -1,16 +1,17 @@
 export const doctor = {
   // ─── IDENTITY ──────────────────────────────────────────────
-  name: "Dr. Priya Sharma",
-  shortName: "Dr. Priya",
+  name: "Dr. N.B Prashanth",
+  shortName: "Dr. Prashanth",
   credentials: "BDS, MDS – Prosthodontics",
   registrationNo: "NMC Reg. No. 2024-DL-48291",
+  nmcVerifyUrl: "",
   tagline: "Precise dental care, tailored to you.",
   heroSubtitle:
     "Trusted by 4,800+ patients across Delhi for implants, RCT, cosmetic dentistry, and complete family dental care.",
 
   // ─── BIO ───────────────────────────────────────────────────
   bio: [
-    "Dr. Priya Sharma has been restoring and rebuilding smiles in Delhi for over 12 years. She completed her MDS in Prosthodontics from Maulana Azad Institute of Dental Sciences and has since trained in implantology across Mumbai and abroad.",
+    "Dr. N.B Prashanth has been restoring and rebuilding smiles in Delhi for over 12 years. She completed her MDS in Prosthodontics from Maulana Azad Institute of Dental Sciences and has since trained in implantology across Mumbai and abroad.",
     "Her approach is direct — she explains every procedure clearly, works at a pace patients are comfortable with, and doesn't recommend treatments that aren't necessary. Patients come back not just because the work holds, but because they trust her judgment.",
     "She believes dentistry should feel like a conversation, not a transaction. Every treatment plan is built around the patient's comfort, timeline, and budget — not the other way around.",
   ],
@@ -26,14 +27,14 @@ export const doctor = {
   ],
 
   // ─── CLINIC ────────────────────────────────────────────────
-  clinicName: "Sharma Dental Studio",
+  clinicName: "SP Dental Crafts",
   clinicTagline: "Modern dentistry in a calm, welcoming environment.",
-  clinicAddress: "B-14, Greater Kailash Part 1, New Delhi – 110048",
-  clinicCity: "New Delhi",
-  phone: "+91 98100 00000",
-  phoneDisplay: "+91 98100 00000",
-  whatsapp: "919810000000", // country code + number, no + or spaces — used in wa.me link
-  whatsappMessage: "Hi Dr. Priya, I'd like to inquire about an appointment.",
+  clinicAddress: "2nd Floor, Apurupa BDR, Road Number 10, Jubilee Hills, Hyderabad, Telangana 500033",
+  clinicCity: "Hyderabad",
+  phone: "+91 93531 11222",
+  phoneDisplay: "+91 93531 11222",
+  whatsapp: "919353111222", // country code + number, no + or spaces — used in wa.me link
+  whatsappMessage: "Hi Dr. Prashanth, I'd like to inquire about an appointment.",
   email: "contact@sharmadentalstudio.com",
   workingHours: [
     { days: "Monday – Saturday", hours: "10:00 AM – 7:00 PM" },
@@ -68,7 +69,7 @@ export const doctor = {
       shortDesc:
         "Permanent tooth replacement that looks and functions exactly like a natural tooth.",
       fullDesc:
-        "Dental implants are titanium posts surgically placed in the jawbone, acting as artificial tooth roots. Once integrated, they support a crown that looks, feels, and functions like a natural tooth. Dr. Priya has placed over 500 implants with a 97% success rate.",
+        "Dental implants are titanium posts surgically placed in the jawbone, acting as artificial tooth roots. Once integrated, they support a crown that looks, feels, and functions like a natural tooth. Dr. Prashanth has placed over 500 implants with a 97% success rate.",
       benefits: [
         "Permanent solution",
         "No damage to adjacent teeth",
@@ -84,7 +85,7 @@ export const doctor = {
       shortDesc:
         "Painless, single-sitting RCT to save an infected tooth without extraction.",
       fullDesc:
-        "Modern root canal treatment is virtually painless and is completed in a single sitting in most cases. The infected pulp is removed, the canal is cleaned and sealed, and the tooth is restored with a crown. Dr. Priya uses rotary endodontics for faster, more precise treatment.",
+        "Modern root canal treatment is virtually painless and is completed in a single sitting in most cases. The infected pulp is removed, the canal is cleaned and sealed, and the tooth is restored with a crown. Dr. Prashanth uses rotary endodontics for faster, more precise treatment.",
       benefits: [
         "Saves the natural tooth",
         "Eliminates pain completely",
@@ -116,7 +117,7 @@ export const doctor = {
       shortDesc:
         "Braces and clear aligners for children and adults at any stage.",
       fullDesc:
-        "Orthodontic treatment corrects misaligned teeth and bite issues using traditional metal braces or modern clear aligners. Treatment is available for children, teens, and adults. Dr. Priya provides a detailed assessment before recommending the best option for your case.",
+        "Orthodontic treatment corrects misaligned teeth and bite issues using traditional metal braces or modern clear aligners. Treatment is available for children, teens, and adults. Dr. Prashanth provides a detailed assessment before recommending the best option for your case.",
       benefits: [
         "Improved smile aesthetics",
         "Better bite function",
@@ -148,7 +149,7 @@ export const doctor = {
       shortDesc:
         "Gentle, child-friendly care with zero-anxiety techniques for kids.",
       fullDesc:
-        "Children's dental visits at Sharma Dental Studio are designed to be positive and anxiety-free. Dr. Priya uses child-friendly language, explain-show-do techniques, and a gentle approach that builds lifelong confidence in dental visits. Early prevention sets up healthy habits for life.",
+        "Children's dental visits at SP Dental Crafts are designed to be positive and anxiety-free. Dr. Prashanth uses child-friendly language, explain-show-do techniques, and a gentle approach that builds lifelong confidence in dental visits. Early prevention sets up healthy habits for life.",
       benefits: [
         "Zero-anxiety approach",
         "Early cavity prevention",
@@ -193,7 +194,7 @@ export const doctor = {
     {
       step: 2,
       title: "Consultation Visit",
-      desc: "Meet Dr. Priya. She will examine your teeth, understand your concerns, and explain your options clearly.",
+      desc: "Meet Dr. Prashanth. She will examine your teeth, understand your concerns, and explain your options clearly.",
     },
     {
       step: 3,
@@ -213,14 +214,16 @@ export const doctor = {
       name: "Rajan Mehta",
       location: "Greater Kailash",
       rating: 5,
+      reviewSource: "Google Review",
       service: "Dental Implants",
       quote:
-        "I was nervous about implants for years. Dr. Priya explained everything so clearly that I finally got it done. Three months in and it feels completely natural. Best decision I made.",
+        "I was nervous about implants for years. Dr. Prashanth explained everything so clearly that I finally got it done. Three months in and it feels completely natural. Best decision I made.",
     },
     {
       name: "Sunita Kapoor",
       location: "South Delhi",
       rating: 5,
+      reviewSource: "Google Review",
       service: "Root Canal",
       quote:
         "I had been dreading a root canal for months. The procedure was completely painless and finished in one sitting. I couldn't believe it. The clinic is also spotlessly clean and calm.",
@@ -229,14 +232,16 @@ export const doctor = {
       name: "Neha Arora",
       location: "Lajpat Nagar",
       rating: 5,
+      reviewSource: "Google Review",
       service: "Teeth Whitening",
       quote:
-        "I had staining from years of coffee and was very conscious while speaking. Dr. Priya explained what result I could realistically expect and delivered exactly that. My smile looks brighter but still natural.",
+        "I had staining from years of coffee and was very conscious while speaking. Dr. Prashanth explained what result I could realistically expect and delivered exactly that. My smile looks brighter but still natural.",
     },
     {
       name: "Kunal Malhotra",
       location: "Saket",
       rating: 5,
+      reviewSource: "Google Review",
       service: "Crowns & Bridges",
       quote:
         "I needed two crowns after a fracture and wanted them to match perfectly. The fit and shade were spot on, and chewing feels completely normal now. The whole process was smooth and on schedule.",
@@ -245,14 +250,16 @@ export const doctor = {
       name: "Aditi Verma",
       location: "Defence Colony",
       rating: 5,
+      reviewSource: "Google Review",
       service: "Orthodontics",
       quote:
-        "I started aligner treatment after years of postponing it. Dr. Priya made a clear month-by-month plan and tracked every change carefully. I can already see a huge difference in my smile confidence.",
+        "I started aligner treatment after years of postponing it. Dr. Prashanth made a clear month-by-month plan and tracked every change carefully. I can already see a huge difference in my smile confidence.",
     },
     {
       name: "Harpreet Kaur",
       location: "Kalkaji",
       rating: 5,
+      reviewSource: "Google Review",
       service: "Pediatric Dentistry",
       quote:
         "My daughter used to get anxious before dental visits, but this clinic changed that experience completely. The team was patient, gentle, and explained everything in kid-friendly language. She now goes in calmly for check-ups.",
@@ -286,6 +293,9 @@ export const doctor = {
       afterSrc: "https://picsum.photos/seed/after-ortho/1200/900",
     },
   ],
+  // Set to true only after adding real patient case photos below.
+  // Always obtain written patient consent before uploading.
+  showBeforeAfter: false,
 
   // ─── EDUCATION ─────────────────────────────────────────────
   education: [
@@ -362,28 +372,43 @@ export const doctor = {
     linkedin: "",
   },
 
+  googleRating: "4.9",
+  googleReviewCount: "300+",
+  googleReviewsUrl: "#", // Replace with your Google Business review link
+
+  // EmailJS setup (optional fallback lead capture):
+  // 1) Create a free account at https://www.emailjs.com and connect your email service.
+  // 2) Create an email template with variables: name, phone, treatment, preferredTime.
+  // 3) Paste your service ID, template ID, and public key below.
+  emailjs: {
+    serviceId: "",
+    templateId: "",
+    publicKey: "",
+  },
+
   // ─── SEO ───────────────────────────────────────────────────
   seo: {
     homeTitle:
-      "Dr. Priya Sharma – Dental Specialist in Delhi | Sharma Dental Studio",
+      "Dr. N.B Prashanth – Dental Specialist in Delhi | SP Dental Crafts",
     homeDesc:
-      "Trusted dental care in Greater Kailash, New Delhi. Implants, RCT, crowns, whitening, orthodontics and pediatric dentistry by Dr. Priya Sharma, MDS Prosthodontics.",
-    aboutTitle: "About Dr. Priya Sharma – Sharma Dental Studio",
+      "Trusted dental care in Greater Kailash, New Delhi. Implants, RCT, crowns, whitening, orthodontics and pediatric dentistry by Dr. N.B Prashanth, MDS Prosthodontics.",
+    aboutTitle: "About Dr. N.B Prashanth – SP Dental Crafts",
     aboutDesc:
       "12+ years of dental expertise. BDS, MDS Prosthodontics. NMC registered. Trained in implantology from ITI India Chapter.",
-    servicesTitle: "Dental Services – Sharma Dental Studio, New Delhi",
+    servicesTitle: "Dental Services – SP Dental Crafts, New Delhi",
     servicesDesc:
       "Comprehensive dental services including implants, root canal, crowns, whitening, orthodontics, and pediatric dentistry in Greater Kailash, Delhi.",
-    galleryTitle: "Clinic Gallery – Sharma Dental Studio",
+    galleryTitle: "Clinic Gallery – SP Dental Crafts",
     galleryDesc:
       "Photos of our dental clinic in Greater Kailash — reception, treatment rooms, and equipment.",
-    contactTitle: "Contact Us – Sharma Dental Studio, New Delhi",
+    contactTitle: "Contact Us – SP Dental Crafts, New Delhi",
     contactDesc:
-      "Call or WhatsApp Sharma Dental Studio in Greater Kailash, New Delhi. Mon–Sat 10 AM – 7 PM.",
-    faqTitle: "Frequently Asked Questions – Sharma Dental Studio",
+      "Call or WhatsApp SP Dental Crafts in Greater Kailash, New Delhi. Mon–Sat 10 AM – 7 PM.",
+    faqTitle: "Frequently Asked Questions – SP Dental Crafts",
     faqDesc:
       "Answers to common questions about dental implants, root canals, whitening, payment options, and visiting our clinic in Delhi.",
   },
 };
 
 export type DoctorConfig = typeof doctor;
+

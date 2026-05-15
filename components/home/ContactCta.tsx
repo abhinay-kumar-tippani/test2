@@ -11,8 +11,8 @@ export default function ContactCta() {
         <p className="mx-auto mt-3 max-w-2xl text-white/70">Call or message us directly and we will guide you on the next best step for your dental concern.</p>
         <p className="mt-5 font-display text-4xl text-white">{doctor.phoneDisplay}</p>
         <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-          <Link href={`tel:${doctor.phone}`} className="inline-flex h-12 items-center justify-center rounded-lg bg-white px-7 font-medium text-primary"><Phone size={18} className="mr-2" />Call Now</Link>
-          <Link href={wa} target="_blank" className="inline-flex h-12 items-center justify-center rounded-full bg-green-500 px-6 text-white hover:bg-green-600"><MessageCircle size={18} className="mr-2" />WhatsApp Us</Link>
+          <Link href={`tel:${doctor.phone}`} className="inline-flex h-12 items-center justify-center rounded-lg bg-gold px-7 font-medium text-navy"><Phone size={18} className="mr-2" />Call Now</Link>
+          <Link href={wa} target="_blank" className="inline-flex h-12 items-center justify-center rounded-lg border border-white px-6 text-white"><MessageCircle size={18} className="mr-2" />WhatsApp Us</Link>
         </div>
       </div>
     </section>

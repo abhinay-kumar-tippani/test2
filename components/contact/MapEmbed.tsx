@@ -1,18 +1,18 @@
 import { doctor } from '@/config/doctor';
+import StaticMapCard from '@/components/ui/StaticMapCard';
 
 export default function MapEmbed() {
-  const isPlaceholder = doctor.mapEmbedUrl.includes('4v1234567890');
+  const mapUrl = (doctor.mapEmbedUrl || '').trim();
+  const hasMapEmbed = Boolean(mapUrl);
   return (
-    <section className="section-space bg-cream">
+    <section className="section-space bg-bg">
       <div className="section-shell">
-        {isPlaceholder ? (
-          <div className="flex h-[280px] items-center justify-center rounded-2xl border border-border bg-white text-muted shadow-[0_8px_30px_rgba(0,0,0,0.08)] md:h-[400px]">
-            Add your Google Maps embed URL for: {doctor.clinicAddress}
+        {hasMapEmbed ? (
+          <div className="overflow-hidden rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.08)]">
+            <iframe src={mapUrl} className="h-[280px] w-full border-0 md:h-[400px]" loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
           </div>
         ) : (
-          <div className="overflow-hidden rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.08)]">
-            <iframe src={doctor.mapEmbedUrl} className="h-[280px] w-full border-0 md:h-[400px]" loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
-          </div>
+          <StaticMapCard />
         )}
       </div>
     </section>
